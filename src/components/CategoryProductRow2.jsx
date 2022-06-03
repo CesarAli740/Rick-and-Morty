@@ -1,8 +1,9 @@
+
 import React from 'react'
 import '../styles/CategoryProductRow.css'
-import { ProductRow } from './ProductRow'
+import { ProductRow2 } from './ProductRow2'
 
-function CategoryProductRow( props ) {
+function CategoryProductRow2( props ) {
     const title = props.title
     const list = props.list
     return (
@@ -12,15 +13,14 @@ function CategoryProductRow( props ) {
         </div>
         <div className='category-body'>
             {list.map((product)=> 
-                <ProductRow 
+                <ProductRow2 
                 name = {product.name} 
-                status = {product.status} 
-                key = {product.id} 
-                image = {product.image }
+                type = {product.type} 
+                dimension = {product.dimension} 
                 />)}  
         </div>
     </div>
   )
 }
 
-export { CategoryProductRow }
+export { CategoryProductRow2 }
